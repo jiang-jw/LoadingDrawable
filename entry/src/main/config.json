@@ -1,0 +1,123 @@
+{
+  "app": {
+    "bundleName": "app.dinus.com.example",
+    "vendor": "dinus",
+    "version": {
+      "code": 1,
+      "name": "1.0"
+    },
+    "apiVersion": {
+      "compatible": 3,
+      "target": 3
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "app.dinus.com.example",
+    "name": ".App",
+    "reqCapabilities": [
+      "video_support"
+    ],
+    "deviceType": [
+      "tv"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.MainActivity",
+        "icon": "$media:icon",
+        "description": "$string:mainactivity_description",
+        "label": "LoadingDrawable Example",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "permissions": [],
+        "name": "app.dinus.com.example.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "LoadingDrawable",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.ShapeChangeActivity",
+        "icon": "$media:icon",
+        "description": "$string:shapechangeactivity_description",
+        "label": "entry",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.GoodsActivity",
+        "icon": "$media:icon",
+        "description": "$string:goodsactivity_description",
+        "label": "entry",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.AnimalActivity",
+        "icon": "$media:icon",
+        "description": "$string:animalactivity_description",
+        "label": "entry",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.SceneryActivity",
+        "icon": "$media:icon",
+        "description": "$string:sceneryactivity_description",
+        "label": "entry",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.CircleJumpActivity",
+        "icon": "$media:icon",
+        "description": "$string:circlejumpactivity_description",
+        "label": "entry",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "landscape",
+        "formEnabled": false,
+        "name": "app.dinus.com.example.CircleRotateActivity",
+        "icon": "$media:icon",
+        "description": "$string:circlerotateactivity_description",
+        "label": "entry",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

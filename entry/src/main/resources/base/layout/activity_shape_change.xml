@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:width="match_parent"
+        ohos:height="match_parent"
+        ohos:background_element="#000000">
+    <app.dinus.com.loadingdrawable.LoadingView
+            ohos:id="$+id:circle_brood_view"
+            ohos:weight="1"
+            ohos:width="match_parent"
+            ohos:background_element="#ffd4d9da"
+            ohos:height="0vp"/>
+
+    <app.dinus.com.loadingdrawable.LoadingView
+            ohos:id="$+id:cool_wait_view"
+            ohos:weight="1"
+            ohos:height="0vp"
+            ohos:background_element="#ff1B78DD"
+            ohos:width="match_parent"/>
+</DirectionalLayout>

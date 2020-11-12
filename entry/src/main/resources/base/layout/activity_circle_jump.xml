@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:width="match_parent"
+        ohos:height="match_parent"
+        ohos:background_element="#000000">
+    <DirectionalLayout
+            ohos:width="match_parent"
+            ohos:height="0vp"
+            ohos:weight="1"
+            ohos:orientation="horizontal">
+        <app.dinus.com.loadingdrawable.LoadingView
+                ohos:id="$+id:collision_view"
+                ohos:weight="1"
+                ohos:width="0vp"
+                ohos:background_element="#ffe9e4d1"
+                ohos:height="match_parent"/>
+
+        <app.dinus.com.loadingdrawable.LoadingView
+                ohos:id="$+id:swap_view"
+                ohos:weight="1"
+                ohos:height="match_parent"
+                ohos:background_element="#ff9c0000"
+                ohos:width="0vp"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+            ohos:width="match_parent"
+            ohos:height="0vp"
+            ohos:weight="1"
+            ohos:orientation="horizontal">
+        <app.dinus.com.loadingdrawable.LoadingView
+                ohos:id="$+id:guard_view"
+                ohos:weight="1"
+                ohos:width="0vp"
+                ohos:background_element="#ff000000"
+                ohos:height="match_parent"/>
+
+        <app.dinus.com.loadingdrawable.LoadingView
+                ohos:id="$+id:dance_view"
+                ohos:weight="1"
+                ohos:height="match_parent"
+                ohos:background_element="#ff94d0c1"
+                ohos:width="0vp"/>
+    </DirectionalLayout>
+</DirectionalLayout>

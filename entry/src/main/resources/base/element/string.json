@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "LoadingDrawable"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "mainactivity_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "shapechangeactivity_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "goodsactivity_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "animalactivity_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "sceneryactivity_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "circlejumpactivity_description",
+      "value": "hap sample empty page"
+    },
+    {
+      "name": "circlerotateactivity_description",
+      "value": "hap sample empty page"
+    }
+  ]
+}
