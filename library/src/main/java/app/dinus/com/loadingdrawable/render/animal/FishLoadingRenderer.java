@@ -8,15 +8,14 @@ import ohos.agp.render.Canvas;
 import ohos.agp.render.ColorMatrix;
 import ohos.agp.render.Paint;
 import ohos.agp.render.Path;
-import ohos.agp.utils.Color;
-import ohos.agp.utils.Matrix;
-import ohos.agp.utils.Point;
-import ohos.agp.utils.Rect;
+import ohos.agp.utils.*;
 import ohos.app.Context;
+import ohos.hiviewdfx.HiLog;
+import ohos.hiviewdfx.HiLogLabel;
 
 public class FishLoadingRenderer extends LoadingRenderer {
     //private Interpolator FISH_INTERPOLATOR = new FishInterpolator();
-
+    HiLogLabel label = new HiLogLabel(HiLog.LOG_APP,0,"MY_TAG");
     private static final float DEFAULT_PATH_FULL_LINE_SIZE = 7.0f;
     private static final float DEFAULT_PATH_DOTTED_LINE_SIZE = DEFAULT_PATH_FULL_LINE_SIZE / 2.0f;
     private static final float DEFAULT_RIVER_HEIGHT = DEFAULT_PATH_FULL_LINE_SIZE * 8.5f;
@@ -120,13 +119,21 @@ public class FishLoadingRenderer extends LoadingRenderer {
         //canvas.clipRect(fishRectF, Region.Op.DIFFERENCE);
         canvas.drawPath(createRiverPath(arcBounds), mPaint);
         //canvas.restoreToCount(riverSaveCount);
-
         //draw fish
         //int fishSaveCount = canvas.save();
         mPaint.setStyle(Paint.Style.FILL_STYLE);
         //canvas.rotate(mFishRotateDegrees, mFishHeadPos[0], mFishHeadPos[1]);
         //canvas.clipPath(createFishEyePath(mFishHeadPos[0], mFishHeadPos[1] - mFishHeight * 0.06f), Region.Op.DIFFERENCE);
-        canvas.drawPath(createFishPath(mFishHeadPos[0], mFishHeadPos[1]), mPaint);
+        Path curFishPath = createFishPath(mFishHeadPos[0], mFishHeadPos[1]);
+        HiLog.info(label,"========mFishRotateDegrees>>>>>"+mFishRotateDegrees);
+        Matrix matrix = new Matrix(new float[]{1,0,0,0,1,0,0,0,1});
+        matrix.translate(mFishHeadPos[0],mFishHeadPos[1]);
+        matrix.rotate(mFishRotateDegrees);
+        matrix.translate(-mFishHeadPos[0],-mFishHeadPos[1]);
+        //Matrix matrix = new Matrix(new float[]{(float) Math.cos(mFishRotateDegrees), (float) -Math.sin(mFishRotateDegrees),0,(float) Math.sin(mFishRotateDegrees),(float) Math.cos(mFishRotateDegrees),0,0,0,1});
+        //matrix.rotate(mFishRotateDegrees);
+        curFishPath.transform(matrix);
+        canvas.drawPath(curFishPath, mPaint);
         //canvas.restoreToCount(fishSaveCount);
 
         //canvas.restoreToCount(saveCount);
